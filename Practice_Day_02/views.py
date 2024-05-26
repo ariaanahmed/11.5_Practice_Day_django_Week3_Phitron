@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
-
+def home(request):
     meals = [
         {
             "strMeal": "BeaverTails",
@@ -56,4 +55,4 @@ def index(request):
         },
     ]
 
-    return render(request, "index.html", {"data": meals})
+    return render(request, "home.html", {"meals": meals})

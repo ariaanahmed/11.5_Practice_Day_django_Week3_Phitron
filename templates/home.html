@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% comment %} {{ block.super }} {% endcomment %}
+    <h1 class="container text-center">This is Project Home</h1>
+    
+    {% for i in meals %}
+        <div class="card" style="width: 18rem; margin-bottom: 1rem;">
+            <img src="{{ i.strMealThumb }}" class="card-img-top" alt="{{ i.strMeal }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ i.strMeal }}</h5>
+                <button class="btn btn-primary">Details</button>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
